@@ -1,57 +1,63 @@
-data_science
-==============================
+# **Project: Predicting Boston Housing Prices**
 
-This is the project for Data Science class.
+### **Install**
 
-Project Organization
-------------
+This project requires **Python** and the following Python libraries installed:
 
-    ├── LICENSE
-    ├── Makefile           <- Makefile with commands like `make data` or `make train`
-    ├── README.md          <- The top-level README for developers using this project.
-    ├── data
-    │   ├── external       <- Data from third party sources.
-    │   ├── interim        <- Intermediate data that has been transformed.
-    │   ├── processed      <- The final, canonical data sets for modeling.
-    │   └── raw            <- The original, immutable data dump.
-    │
-    ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
-    │
-    ├── models             <- Trained and serialized models, model predictions, or model summaries
-    │
-    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
-    │
-    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-    │
-    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-    │   └── figures        <- Generated graphics and figures to be used in reporting
-    │
-    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `pip freeze > requirements.txt`
-    │
-    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
-    │   │
-    │   ├── data           <- Scripts to download or generate data
-    │   │   └── make_dataset.py
-    │   │
-    │   ├── features       <- Scripts to turn raw data into features for modeling
-    │   │   └── build_features.py
-    │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
-    │   │   ├── predict_model.py
-    │   │   └── train_model.py
-    │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-    │       └── visualize.py
-    │
-    └── tox.ini            <- tox file with settings for running tox; see tox.testrun.org
+*   NumPy
+*   Pandas
+*   matplotlib
+*   scikit-learn
+*   seaborn
+*   scipy
+
+You will also need to have software installed to run and execute a Jupyter Notebook
+
+If you do not have Python installed yet, it is highly recommended that you install the Anaconda distribution of Python, which already has the above packages and more included.
+
+### **Code**
+
+The code is provided in the Predict_Boston_House_Prices.ipynb notebook file.
+
+### **Run**
+
+In a terminal or command window, navigate to the top-level project directory ```Predict_Boston_House_Prices/``` (that contains this README) and run one of the following commands:
 
 
---------
+```
+ipython notebook Predict_Boston_House_Prices.ipynb
+```
 
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+or
+
+```
+jupyter notebook boston_housing.ipynb
+```
+
+This will open the Jupyter Notebook software and project file in your browser.
+
+### **Data**
+
+The boston_dataset is loaded from sklearn. The original dataset is the dictionary, so I abstract the data of features and the data of target variable from boston_dataset and form a new dataset named "boston".
+
+**Data Set Characteristics:**  
+
+*   Number of Instances: 506 
+*   Number of Attributes: 13 numeric/categorical predictive. Median Value (attribute 14) is usually the target.
+*   **Features:**
+        * - CRIM:     per capita crime rate by town
+        * - ZN:       proportion of residential land zoned for lots over 25,000 sq.ft.
+        * - INDUS:    proportion of non-retail business acres per town
+        * - CHAS:     Charles River dummy variable (= 1 if tract bounds river; 0 otherwise)
+        * - NOX:      nitric oxides concentration (parts per 10 million)
+        * - RM:       average number of rooms per dwelling
+        * - AGE:      proportion of owner-occupied units built prior to 1940
+        * - DIS:      weighted distances to five Boston employment centres
+        * - RAD:      index of accessibility to radial highways
+        * - TAX:      full-value property-tax rate per $10,000
+        * - PTRATIO:  pupil-teacher ratio by town
+        * - B:        1000(Bk - 0.63)^2 where Bk is the proportion of blacks by town
+        * - LSTAT:    % lower status of the population
+
+*   **Target Variable:**
+        * - MEDV:     Median value of owner-occupied homes in $1000's
